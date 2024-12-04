@@ -115,4 +115,55 @@
 
 .delete-btn:hover {
     background-color: #c82333;
+}
+
+/* Update button and layout styles */
+.table-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.search-section {
+    flex: 1;
+}
+
+.button-section {
+    margin-left: auto; /* Push button to the right */
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.add-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 100px; /* Ensure minimum width */
+    justify-content: center; /* Center the content */
+}
+
+.add-btn i {
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    background-color: #218838;
 } 
