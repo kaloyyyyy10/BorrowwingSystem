@@ -14,7 +14,6 @@ body {
 /* Sidebar */
 .sidebar {
   background-color: #263548;
-  color: white;
   width: 250px;
   position: fixed;
   top: 0;
@@ -24,56 +23,143 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  border-right: 2px solid #1a2939;
 }
 
-.sidebar .logo-section {
+.logo-section {
+  padding: 20px 0;
   text-align: center;
 }
 
-.sidebar .logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 20px;
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
-.sidebar .menu-links a {
+.logo-text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #13afdf;
+  letter-spacing: 2px;
+}
+
+.logo-subtext {
+  font-size: 14px;
+  color: #8a9bb3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-links a {
   color: white;
   text-decoration: none;
   display: block;
-  margin: 15px 0;
-  padding: 10px 15px;
+  padding: 12px 15px;
   font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.sidebar .menu-links a:hover {
+.small-header {
+  font-size: 13px !important;
+  color: #8a9bb3 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 15px !important;
+  margin-top: 15px !important;
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-content {
+  display: none;
   background-color: #1a2939;
 }
 
-/* Sidebar */
-.sidebar .bottom-links {
-  margin-top: auto;
-  color: white; 
-  }
-  
-  .sidebar .bottom-links a {
-  color: white; 
-  text-decoration: none;
+.dropdown-content.show {
   display: block;
-  margin: 15px 0;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  }
-  
-  .sidebar .bottom-links a:hover {
+}
+
+.fas {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
   background-color: #1a2939;
-  }
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 25px !important;
+  font-size: 16px !important;
+}
+
+.dropdown-content a:hover {
+  background-color: #263548;
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* Admin Dropdown specific styles */
+#user-dropdown {
+  right: 0;
+  left: auto; /* Override the default left: 0 */
+  bottom: 40px;
+  min-width: 200px;
+  background-color: #1a2939;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.bottom-links {
+  margin-top: auto;
+  margin-bottom: 20px;
+  position: relative;
+  color: rgb(163, 144, 144);
+}
+
+.bottom-links .dropdown-content {
+  z-index: 1000;
+}
 
 /* Wrapper */
 .wrapper {
@@ -81,15 +167,6 @@ body {
   padding: 20px;
 }
 
-.card .card-header{
-  padding-top: 50px;
-}
-
-.card .card-body{
-  padding-bottom: 80px;
-}
-
-/* Dashboard Main Title */
 .dashboard-title {
   font-size: 32px;
   font-weight: bold;
@@ -102,8 +179,7 @@ body {
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 30px;
 }
 
 .dashboard-cards .card {
@@ -114,55 +190,33 @@ body {
   text-align: center;
 }
 
-
 .dashboard-cards .card-header {
   font-size: 24px;
   font-weight: bold;
   color: #333;
-  background-color: #F8B400;
+  background-color: #13afdf;
+  padding: 20px;
 }
-
-.dashboard-cards .card-body {
-  font-size: 22px;
-  color: #2d3a3a;
-  font-weight: 600;
-}
-
 
 /* Tables */
 .tables {
   display: flex;
   gap: 30px;
-  padding-left: 30px;
+  padding: 0 30px;
+  flex-wrap: wrap;
 }
 
 .table-container {
-  width: 48%;
-  height: 1px;
-}
-
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+  width: calc(50% - 15px); /* Ensures spacing with gap */
 }
 
 .table-header h2 {
   font-size: 22px;
-}
-
-.filter-category {
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .table {
   width: 100%;
-  margin-top: 10px;
   border-collapse: collapse;
   background-color: white;
   border-radius: 10px;
@@ -210,4 +264,108 @@ body {
   .dashboard-cards {
     flex-direction: column;
   }
+}
+
+/* Add these styles for Maintenance and Reports dropdowns */
+.menu-links .dropdown-btn {
+    font-size: 14px;  /* Smaller font size */
+    padding: 8px 12px;  /* Reduced padding */
+    margin-left: 10px;  /* Indent the buttons */
+    width: calc(100% - 10px);  /* Adjust width to account for indent */
+}
+
+.menu-links .dropdown-content {
+    font-size: 13px;  /* Smaller font for dropdown items */
+    margin-left: 20px;  /* Indent the dropdown content */
+    width: calc(100% - 30px);  /* Adjust width to account for indent */
+    position: static;  /* Makes dropdown appear in-flow */
+    box-shadow: none;  /* Remove shadow for nested look */
+}
+
+.menu-links .dropdown-content a {
+    padding: 6px 10px;  /* Reduced padding for dropdown items */
+    margin: 5px 0;  /* Reduced margins */
+}
+
+/* Adjust icon sizes for these dropdowns */
+.menu-links .dropdown-btn i {
+    font-size: 12px;  /* Smaller icons */
+}
+
+/* Keep the user dropdown (bottom) at original size */
+.bottom-links .dropdown-btn,
+.bottom-links .dropdown-content {
+    font-size: 16px;  /* Original size */
+}
+
+/* Add styles for Maintenance and Reports headers */
+.menu-section-header {
+    font-size: 13px;
+    color: #8a9bb3;
+    padding: 8px 15px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+/* Adjust the items under these sections */
+.menu-section-header + a {
+    font-size: 14px;
+    padding: 8px 25px !important;  /* More indentation */
+    margin: 2px 0 !important;      /* Reduced margin */
+}
+
+/* Regular menu items and dropdown items - consistent large size */
+.sidebar .menu-links a,
+.dropdown-btn,
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 8px 0;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Dropdown specific styles */
+.dropdown-content {
+    display: none;
+    background-color: #1a2939;
+    min-width: 200px;
+}
+
+.dropdown-content a {
+    padding: 12px 15px !important; /* Same padding as other items */
+    font-size: 16px !important;    /* Same size as other items */
+    margin: 0 !important;          /* Reset margin for dropdown items */
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Small header style only for Maintenance and Reports */
+.small-header {
+    font-size: 13px !important;
+    color: #8a9bb3 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 15px !important;
+    padding: 8px 15px !important;
+}
+
+.small-header:hover {
+    background-color: #1a2939;
+    color: white !important;
+}
+
+/* Icons alignment */
+.fas {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
 }
