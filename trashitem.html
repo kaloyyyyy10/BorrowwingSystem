@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Trash Items</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="trashitem.css">
 </head>
@@ -36,12 +36,12 @@
       <a href="member.html"><i class="fas fa-users"></i> Member</a>
       
       <!-- Maintenance as clickable link -->
-      <a href="maintenance.html" class="small-header"><i class="fas fa-tools"></i> Maintenance</a>
+      <a href="" class="small-header"><i class="fas fa-tools"></i> Maintenance</a>
       <a href="item-type.php"><i class="fas fa-boxes"></i> Item Type</a>
       <a href="category.php"><i class="fas fa-tags"></i> Category</a>
       
       <!-- Reports as clickable link -->
-      <a href="report.html" class="small-header"><i class="fas fa-chart-line"></i> Reports</a>
+      <a href="" class="small-header"><i class="fas fa-chart-line"></i> Reports</a>
       <a href="generate.html"><i class="fas fa-file-export"></i> Generate</a>
     </div>
     <div class="bottom-links">
@@ -62,35 +62,30 @@
 
 <div class="wrapper">
     <div class="content">
-        <h1 class="dashboard-title">LIST ITEMS</h1>
+        <h1 class="dashboard-title">TRASH ITEMS</h1>
         
         <div class="table-container">
             <div class="table-header">
                 <div class="table-actions">
                     <input type="text" id="searchInput" placeholder="Search..." class="search-input">
-                    <button class="add-btn">
-                        <i class="fas fa-plus"></i> Add New
-                    </button>
                 </div>
             </div>
             <table class="items-table">
                 <thead>
                     <tr>
                         <th>Quantity</th>
-                        <th>Issued</th>
                         <th>Serial No.</th>
                         <th>Item Name</th>
                         <th>Brand</th>
                         <th>Category</th>
                         <th>Description Type</th>
-                        <th>Date</th>
+                        <th>Date Deleted</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>5</td>
-                        <td>Yes</td>
+                        <td>3</td>
                         <td>SN001</td>
                         <td>Laptop</td>
                         <td>Dell</td>
@@ -98,13 +93,12 @@
                         <td>Computer</td>
                         <td>2024-03-20</td>
                         <td>
-                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="restore-btn"><i class="fas fa-trash-restore"></i></button>
                             <button class="delete-btn"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>No</td>
                         <td>SN002</td>
                         <td>Monitor</td>
                         <td>Samsung</td>
@@ -112,7 +106,46 @@
                         <td>Display</td>
                         <td>2024-03-19</td>
                         <td>
-                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="restore-btn"><i class="fas fa-trash-restore"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>SN003</td>
+                        <td>Keyboard</td>
+                        <td>Logitech</td>
+                        <td>Electronics</td>
+                        <td>Input Device</td>
+                        <td>2024-03-18</td>
+                        <td>
+                            <button class="restore-btn"><i class="fas fa-trash-restore"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>SN004</td>
+                        <td>Mouse</td>
+                        <td>HP</td>
+                        <td>Electronics</td>
+                        <td>Input Device</td>
+                        <td>2024-03-17</td>
+                        <td>
+                            <button class="restore-btn"><i class="fas fa-trash-restore"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>SN005</td>
+                        <td>Projector</td>
+                        <td>Epson</td>
+                        <td>Electronics</td>
+                        <td>Display</td>
+                        <td>2024-03-16</td>
+                        <td>
+                            <button class="restore-btn"><i class="fas fa-trash-restore"></i></button>
                             <button class="delete-btn"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
@@ -120,4 +153,8 @@
             </table>
         </div>
     </div>
-</div> 
+</div>
+
+<script src="trashitem.js"></script>
+</body>
+</html> 

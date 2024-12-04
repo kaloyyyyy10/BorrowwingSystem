@@ -99,8 +99,10 @@
   .dropdown-btn {
     width: 100%;
     text-align: left;
+    padding: 10px;
     background: none;
     border: none;
+    color: inherit;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -108,7 +110,6 @@
   }
   
   .dropdown-icon {
-    margin-left: auto;
     transition: transform 0.3s ease;
   }
   
@@ -289,32 +290,51 @@
 
 .table-actions {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
+    width: 100%;
+}
+
+.search-section {
+    flex: 1;
+}
+
+.button-section {
+    margin-left: auto; /* Push button to the right */
 }
 
 .search-input {
     padding: 10px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #dee2e6;
     border-radius: 4px;
-    width: 250px;
+    width: 300px;
+    font-size: 14px;
 }
 
 .add-btn {
-    background-color: #00b4d8;
+    background-color: #28a745;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    font-size: 14px;
+    height: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
+    min-width: 100px; /* Ensure minimum width */
+    justify-content: center; /* Center the content */
+}
+
+.add-btn i {
+    font-size: 14px;
 }
 
 .add-btn:hover {
-    background-color: #0096c7;
+    background-color: #218838;
 }
 
 .content {
@@ -337,4 +357,33 @@
 
 .text-center {
     text-align: center;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.storage-link {
+  flex-grow: 1;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.dropdown-toggle:hover {
+  opacity: 0.8;
 }

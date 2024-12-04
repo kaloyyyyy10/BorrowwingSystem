@@ -37,12 +37,12 @@
       <a href="member.html"><i class="fas fa-users"></i> Member</a>
       
       <!-- Maintenance as clickable link -->
-      <a href="maintenance.html" class="small-header"><i class="fas fa-tools"></i> Maintenance</a>
+      <a href="" class="small-header"><i class="fas fa-tools"></i> Maintenance</a>
       <a href="item-type.php"><i class="fas fa-boxes"></i> Item Type</a>
       <a href="category.php"><i class="fas fa-tags"></i> Category</a>
       
       <!-- Reports as clickable link -->
-      <a href="report.html" class="small-header"><i class="fas fa-chart-line"></i> Reports</a>
+      <a href="" class="small-header"><i class="fas fa-chart-line"></i> Reports</a>
       <a href="generate.html"><i class="fas fa-file-export"></i> Generate</a>
     </div>
     <div class="bottom-links">
@@ -78,20 +78,77 @@
                 <table class="table issued-items-table">
                     <thead>
                         <tr>
-                            <th>Member Name</th>
-                            <th>Item</th>
-                            <th>Quantity</th>
+                            <th>Item Name</th>
+                            <th>Serial No.</th>
+                            <th>Borrower</th>
+                            <th>Date Borrowed</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Table content will be populated by JavaScript -->
+                        <tr>
+                            <td>Laptop</td>
+                            <td>SN001</td>
+                            <td>John Doe</td>
+                            <td>2024-03-20</td>
+                            <td>2024-03-27</td>
+                            <td><span class="status-borrowed">Borrowed</span></td>
+                            <td>
+                                <button class="return-btn"><i class="fas fa-undo"></i> Return</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Projector</td>
+                            <td>SN002</td>
+                            <td>Jane Smith</td>
+                            <td>2024-03-19</td>
+                            <td>2024-03-26</td>
+                            <td><span class="status-overdue">Overdue</span></td>
+                            <td>
+                                <button class="return-btn"><i class="fas fa-undo"></i> Return</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Monitor</td>
+                            <td>SN003</td>
+                            <td>Mike Johnson</td>
+                            <td>2024-03-21</td>
+                            <td>2024-03-28</td>
+                            <td><span class="status-borrowed">Borrowed</span></td>
+                            <td>
+                                <button class="return-btn"><i class="fas fa-undo"></i> Return</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Keyboard</td>
+                            <td>SN004</td>
+                            <td>Sarah Wilson</td>
+                            <td>2024-03-18</td>
+                            <td>2024-03-25</td>
+                            <td><span class="status-overdue">Overdue</span></td>
+                            <td>
+                                <button class="return-btn"><i class="fas fa-undo"></i> Return</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mouse</td>
+                            <td>SN005</td>
+                            <td>David Brown</td>
+                            <td>2024-03-21</td>
+                            <td>2024-03-28</td>
+                            <td><span class="status-borrowed">Borrowed</span></td>
+                            <td>
+                                <button class="return-btn"><i class="fas fa-undo"></i> Return</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <script src="storage.js"></script>
+    <script src="IssuedItem.js"></script>
 </body>
 </html>
